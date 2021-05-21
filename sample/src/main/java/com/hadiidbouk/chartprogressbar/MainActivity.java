@@ -1,6 +1,7 @@
 package com.hadiidbouk.chartprogressbar;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
@@ -22,23 +23,23 @@ public class MainActivity extends AppCompatActivity implements OnBarClickedListe
 
 		ArrayList<BarData> dataList = new ArrayList<>();
 
-		BarData data = new BarData("Sep", 3.4f, "3.4€");
+		BarData data = new BarData("", 9f, "");
 		dataList.add(data);
 
-		data = new BarData("Oct", 8.0f, "8.0€");
-		dataList.add(data);
-
-		data = new BarData("Nov", 1.8f, "1.8€");
-		dataList.add(data);
-
-		data = new BarData("Dec", 7.3f, "7.3€");
-		dataList.add(data);
-
-		data = new BarData("Jan", 6.2f, "6.2€");
-		dataList.add(data);
-
-		data = new BarData("Feb", 3.3f, "3.3€");
-		dataList.add(data);
+//		data = new BarData("", 8.0f, "");
+//		dataList.add(data);
+//
+//		data = new BarData("", 1.8f, "1");
+//		dataList.add(data);
+//
+//		data = new BarData("", 7.3f, "");
+//		dataList.add(data);
+//
+//		data = new BarData("", 6.2f, "");
+//		dataList.add(data);
+//
+//		data = new BarData("", 3.3f, "");
+//		dataList.add(data);
 
 		mChart = (ChartProgressBar) findViewById(R.id.ChartProgressBar);
 
@@ -59,6 +60,10 @@ public class MainActivity extends AppCompatActivity implements OnBarClickedListe
 				break;
 			case R.id.BtnClearClick :
 				mChart.removeClickedBar();
+				break;
+			case R.id.BtnColorChangeClick :
+				mChart.setProgressColor(R.color.c_007aff);
+				mChart.build();
 				break;
 		}
 	}

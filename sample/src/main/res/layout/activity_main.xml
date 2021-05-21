@@ -6,42 +6,44 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	tools:context="com.hadiidbouk.chartprogressbar.MainActivity"
-	android:background="#1665C1">
+	android:background="#000000">
 
-
-	<com.hadiidbouk.charts.ChartProgressBar
-		android:id="@+id/ChartProgressBar"
-		android:layout_width="match_parent"
+	<LinearLayout
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_centerInParent="true"
-		android:gravity="center"
-		app:hdBarCanBeClick="true"
-		app:hdBarHeight="170dp"
-		app:hdBarWidth="7dp"
-		app:hdBarRadius="10dp"
-		app:hdMaxValue="10"
-		app:hdEmptyColor="@color/empty"
-		app:hdProgressColor="@color/progress"
-		app:hdProgressClickColor="@color/progress_click"
-		app:hdPinBackgroundColor="@color/pin_background"
-		app:hdPinTextColor="@color/pin_text"
-		app:hdPinPaddingBottom="5dp"
-		app:hdBarTitleColor="@color/bar_title_color"
-		app:hdBarTitleTxtSize="12sp"
-		app:hdPinTxtSize="17sp"
-		app:hdPinMarginBottom="45dp"
-		app:hdPinMarginEnd="22dp"
-		app:hdBarTitleMarginTop="9dp"
-		app:hdPinDrawable="@drawable/ic_pin"
-		app:hdProgressDisableColor="@color/progress_disable"
-		app:hdBarTitleSelectedColor="@color/bar_title_selected_color"
-		app:hdBarCanBeToggle="true"/>
+		android:background="#000000"
+		android:id="@+id/ChartProgressBar_ll"
+		android:layout_centerInParent="true">
+
+		<com.hadiidbouk.charts.ChartProgressBar
+			android:layout_width="12dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/ChartProgressBar"
+			android:gravity="center"
+			app:hdBarCanBeClick="false"
+			app:hdBarHeight="64dp"
+			app:hdBarWidth="12dp"
+			app:hdBarRadius="5dp"
+			app:hdMaxValue="10"
+			app:hdEmptyColor="@color/c_f0f0f0"
+			app:hdProgressColor="@color/c_007aff"
+			app:hdProgressClickColor="#ffffff"
+			app:hdPinBackgroundColor="#00000000"
+			app:hdBarTitleColor="@color/bar_title_color"
+			app:hdProgressDisableColor="@color/progress_disable"
+			app:hdBarTitleSelectedColor="@color/bar_title_selected_color"
+			app:hdBarCanBeToggle="true"/>
+	</LinearLayout>
+
+
+
 
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@id/ChartProgressBar"
-		android:layout_marginTop="40dp">
+		android:layout_below="@id/ChartProgressBar_ll"
+		android:layout_marginTop="40dp"
+		android:gravity="center_vertical">
 		<Button
 			android:id="@+id/BtnClear"
 			android:onClick="BtnPressed"
@@ -63,5 +65,13 @@
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:text="@string/btn_clear_click"/>
+		<Button
+			android:id="@+id/BtnColorChangeClick"
+			android:onClick="BtnPressed"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Color Change"/>
+
 	</LinearLayout>
 </RelativeLayout>

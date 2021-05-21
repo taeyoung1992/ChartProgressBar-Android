@@ -12,4 +12,6 @@
 	<color name="pin_text">#ffffff</color>
 	<color name="bar_title_color">#B6BDD5</color>
 	<color name="bar_title_selected_color">#FFFFFF</color>
+	<color name="c_007aff">#007aff</color>
+	<color name="c_f0f0f0">#f0f0f0</color>
 </resources>
