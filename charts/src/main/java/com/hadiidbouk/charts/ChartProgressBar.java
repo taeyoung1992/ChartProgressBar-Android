@@ -40,8 +40,8 @@ public class ChartProgressBar extends FrameLayout {
 //	private int mPinPaddingBottom;
 //	private int mPinPaddingEnd;
 //	private int mPinPaddingStart;
-	private int mBarTitleColor;
-	private float mBarTitleTxtSize;
+//	private int mBarTitleColor;
+//	private float mBarTitleTxtSize;
 //	private float mPinTxtSize;
 	private DisplayMetrics mMetrics;
 	private FrameLayout oldFrameLayout;
@@ -56,7 +56,7 @@ public class ChartProgressBar extends FrameLayout {
 //	private int mPinDrawable;
 	private ArrayList<TextView> pins = new ArrayList<>();
 //	private int mBarTitleMarginTop;
-	private int mBarTitleSelectedColor;
+//	private int mBarTitleSelectedColor;
 	private int mProgressDisableColor;
 	private OnBarClickedListener listener;
 	private boolean mBarCanBeToggle;
@@ -86,7 +86,7 @@ public class ChartProgressBar extends FrameLayout {
 		mProgressColor = typedArray.getResourceId(R.styleable.ChartProgressBar_hdProgressColor, ContextCompat.getColor(mContext, R.color.progress));
 		mProgressClickColor = typedArray.getResourceId(R.styleable.ChartProgressBar_hdProgressClickColor, ContextCompat.getColor(mContext, R.color.progress_click));
 		mProgressDisableColor = typedArray.getResourceId(R.styleable.ChartProgressBar_hdProgressDisableColor, ContextCompat.getColor(mContext, android.R.color.darker_gray));
-		mBarTitleSelectedColor = typedArray.getResourceId(R.styleable.ChartProgressBar_hdBarTitleSelectedColor, ContextCompat.getColor(mContext, R.color.progress_click));
+//		mBarTitleSelectedColor = typedArray.getResourceId(R.styleable.ChartProgressBar_hdBarTitleSelectedColor, ContextCompat.getColor(mContext, R.color.progress_click));
 //		mPinTextColor = typedArray.getResourceId(R.styleable.ChartProgressBar_hdPinTextColor, ContextCompat.getColor(mContext, R.color.pin_text));
 		mPinBackgroundColor = typedArray.getResourceId(R.styleable.ChartProgressBar_hdPinBackgroundColor, ContextCompat.getColor(mContext, R.color.pin_background));
 //		mPinPaddingTop = typedArray.getDimensionPixelSize(R.styleable.ChartProgressBar_hdPinPaddingTop, 0);
@@ -94,9 +94,9 @@ public class ChartProgressBar extends FrameLayout {
 //		mPinPaddingEnd = typedArray.getDimensionPixelSize(R.styleable.ChartProgressBar_hdPinPaddingEnd, 0);
 //		mPinPaddingStart = typedArray.getDimensionPixelSize(R.styleable.ChartProgressBar_hdPinPaddingStart, 0);
 		isBarCanBeClick = typedArray.getBoolean(R.styleable.ChartProgressBar_hdBarCanBeClick, false);
-		mBarTitleColor = typedArray.getResourceId(R.styleable.ChartProgressBar_hdBarTitleColor, ContextCompat.getColor(mContext, R.color.bar_title_color));
+//		mBarTitleColor = typedArray.getResourceId(R.styleable.ChartProgressBar_hdBarTitleColor, ContextCompat.getColor(mContext, R.color.bar_title_color));
 		mMaxValue = typedArray.getFloat(R.styleable.ChartProgressBar_hdMaxValue, 1f);
-		mBarTitleTxtSize = typedArray.getDimension(R.styleable.ChartProgressBar_hdBarTitleTxtSize, 0);
+//		mBarTitleTxtSize = typedArray.getDimension(R.styleable.ChartProgressBar_hdBarTitleTxtSize, 0);
 //		mPinTxtSize = typedArray.getDimension(R.styleable.ChartProgressBar_hdPinTxtSize, 0);
 //		mPinMarginTop = typedArray.getDimensionPixelSize(R.styleable.ChartProgressBar_hdPinMarginTop, 0);
 //		mPinMarginBottom = typedArray.getDimensionPixelSize(R.styleable.ChartProgressBar_hdPinMarginBottom, 0);
@@ -169,8 +169,8 @@ public class ChartProgressBar extends FrameLayout {
 
 		LinearLayout linearLayout = new LinearLayout(mContext);
 		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
-			LayoutParams.MATCH_PARENT,
-			LayoutParams.MATCH_PARENT
+			LayoutParams.WRAP_CONTENT,
+			LayoutParams.WRAP_CONTENT
 		);
 
 		params.gravity = Gravity.CENTER;
@@ -222,25 +222,25 @@ public class ChartProgressBar extends FrameLayout {
 		linearLayout.addView(bar);
 
 		//Adding txt below bar
-		TextView txtBar = new TextView(mContext);
-		LayoutParams txtParams = new LayoutParams(
-			LayoutParams.WRAP_CONTENT,
-			LayoutParams.WRAP_CONTENT
-		);
-
-		txtBar.setTextSize(getSP(mBarTitleTxtSize));
-		txtBar.setText(title);
-		txtBar.setGravity(Gravity.CENTER);
-		txtBar.setTextColor(ContextCompat.getColor(mContext, mBarTitleColor));
-
-		txtBar.setLayoutParams(txtParams);
-
-		linearLayout.addView(txtBar);
+//		TextView txtBar = new TextView(mContext);
+//		LayoutParams txtParams = new LayoutParams(
+//			LayoutParams.WRAP_CONTENT,
+//			LayoutParams.WRAP_CONTENT
+//		);
+//
+//		txtBar.setTextSize(getSP(mBarTitleTxtSize));
+//		txtBar.setText(title);
+//		txtBar.setGravity(Gravity.CENTER);
+//		txtBar.setTextColor(ContextCompat.getColor(mContext, mBarTitleColor));
+//
+//		txtBar.setLayoutParams(txtParams);
+//
+//		linearLayout.addView(txtBar);
 
 		FrameLayout rootFrameLayout = new FrameLayout(mContext);
 		LinearLayout.LayoutParams rootParams = new LinearLayout.LayoutParams(
 			0,
-			LayoutParams.MATCH_PARENT,
+			LayoutParams.WRAP_CONTENT,
 			1f
 		);
 
@@ -440,11 +440,11 @@ public class ChartProgressBar extends FrameLayout {
 					}
 				}
 
-				if (mBarTitleSelectedColor > 0) {
-					titleTxtView.setTextColor(ContextCompat.getColor(mContext, mBarTitleSelectedColor));
-				} else {
-					titleTxtView.setTextColor(ContextCompat.getColor(mContext, android.R.color.holo_green_dark));
-				}
+//				if (mBarTitleSelectedColor > 0) {
+//					titleTxtView.setTextColor(ContextCompat.getColor(mContext, mBarTitleSelectedColor));
+//				} else {
+//					titleTxtView.setTextColor(ContextCompat.getColor(mContext, android.R.color.holo_green_dark));
+//				}
 
 			}
 		}
@@ -477,7 +477,7 @@ public class ChartProgressBar extends FrameLayout {
 				if (progressLayer != null) {
 					progressLayer.setColor(ContextCompat.getColor(mContext, mProgressColor));
 				}
-				titleTxtView.setTextColor(ContextCompat.getColor(mContext, mBarTitleColor));
+//				titleTxtView.setTextColor(ContextCompat.getColor(mContext, mBarTitleColor));
 			}
 		}
 	}
@@ -679,10 +679,10 @@ public class ChartProgressBar extends FrameLayout {
 							}
 						} else {
 							TextView titleTxtView = (TextView) view;
-							if (mProgressDisableColor > 0)
-								titleTxtView.setTextColor(ContextCompat.getColor(mContext, mBarTitleColor));
-							else
-								titleTxtView.setTextColor(ContextCompat.getColor(mContext, android.R.color.darker_gray));
+//							if (mProgressDisableColor > 0)
+//								titleTxtView.setTextColor(ContextCompat.getColor(mContext, mBarTitleColor));
+//							else
+//								titleTxtView.setTextColor(ContextCompat.getColor(mContext, android.R.color.darker_gray));
 						}
 					}
 				}

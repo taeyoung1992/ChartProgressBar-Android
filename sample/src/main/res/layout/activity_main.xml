@@ -6,17 +6,18 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	tools:context="com.hadiidbouk.chartprogressbar.MainActivity"
-	android:background="#000000">
+	android:background="#ffffff">
 
 	<LinearLayout
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:background="#000000"
+		android:orientation="vertical"
 		android:id="@+id/ChartProgressBar_ll"
 		android:layout_centerInParent="true">
 
 		<com.hadiidbouk.charts.ChartProgressBar
-			android:layout_width="12dp"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:id="@+id/ChartProgressBar"
 			android:gravity="center"
@@ -29,10 +30,12 @@
 			app:hdProgressColor="@color/c_007aff"
 			app:hdProgressClickColor="#ffffff"
 			app:hdPinBackgroundColor="#00000000"
-			app:hdBarTitleColor="@color/bar_title_color"
 			app:hdProgressDisableColor="@color/progress_disable"
-			app:hdBarTitleSelectedColor="@color/bar_title_selected_color"
 			app:hdBarCanBeToggle="true"/>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#000000"/>
 	</LinearLayout>
 
 

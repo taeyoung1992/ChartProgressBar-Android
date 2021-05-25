@@ -26,27 +26,26 @@ public class MainActivity extends AppCompatActivity implements OnBarClickedListe
 		BarData data = new BarData("", 0f, "");
 		dataList.add(data);
 
-//		data = new BarData("", 8.0f, "");
-//		dataList.add(data);
-//
-//		data = new BarData("", 1.8f, "1");
-//		dataList.add(data);
-//
-//		data = new BarData("", 7.3f, "");
-//		dataList.add(data);
-//
-//		data = new BarData("", 6.2f, "");
-//		dataList.add(data);
-//
-//		data = new BarData("", 3.3f, "");
-//		dataList.add(data);
+		data = new BarData("", 8.0f, "");
+		dataList.add(data);
+
+		data = new BarData("", 1.8f, "1");
+		dataList.add(data);
+
+		data = new BarData("", 7.3f, "");
+		dataList.add(data);
+
+		data = new BarData("", 6.2f, "");
+		dataList.add(data);
+
+		data = new BarData("", 3.3f, "");
+		dataList.add(data);
 
 		mChart = (ChartProgressBar) findViewById(R.id.ChartProgressBar);
 
 		mChart.setDataList(dataList);
 		mChart.build();
 		mChart.setOnBarClickedListener(this);
-		mChart.disableBar(dataList.size() - 1);
 	}
 
 	public void BtnPressed(View view) {
