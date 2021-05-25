@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnBarClickedListe
 
 		ArrayList<BarData> dataList = new ArrayList<>();
 
-		BarData data = new BarData("", 9f, "");
+		BarData data = new BarData("", 0f, "");
 		dataList.add(data);
 
 //		data = new BarData("", 8.0f, "");
