@@ -196,11 +196,9 @@ public class ChartProgressBar extends FrameLayout {
 		progressParams.gravity = Gravity.CENTER;
 		bar.setLayoutParams(progressParams);
 
-		if(value != 0){
-			BarAnimation anim = new BarAnimation(bar, 0, value);
-			anim.setDuration(500);
-			bar.startAnimation(anim);
-		}
+		BarAnimation anim = new BarAnimation(bar, 0, value);
+		anim.setDuration(500);
+		bar.startAnimation(anim);
 
 		LayerDrawable layerDrawable = (LayerDrawable) bar.getProgressDrawable();
 		layerDrawable.mutate();
